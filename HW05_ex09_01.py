@@ -7,11 +7,25 @@
 # Imports
 
 # Body
+def long_words():
+	try:
+		fin = open('words.txt')
+		line = fin.readline()
+		for line in fin:
+			s = line.split()
+			for i in range (len(s)):
+				if len(s[i]) > 20:
+					print s[i]
+						
+	except:
+		print 'Something went wrong with the file'
+	
 
 
 ##############################################################################
 def main():
-    pass # Call your functions here.
+	# Call your functions here.
+	long_words()
 
 if __name__ == '__main__':
     main()
